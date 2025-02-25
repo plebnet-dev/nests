@@ -31,8 +31,10 @@
     <ItemGroup>
         <ProjectReference Include="..\Nests.Database\Nests.Database.csproj"/>
     </ItemGroup>
-
-    <Target BeforeTargets="BeforeCompile" Name="Protobuf" Condition="'$(Configuration)' != 'Release'">
-        <Exec Command="protoc -Iproto --csharp_out=proto proto/livekit_models.proto proto/livekit_egress.proto proto/livekit_room.proto"/>
-    </Target>
+    <ItemGroup>
+        <Protobuf Include="proto\livekit_models.proto" GrpcServices="Client" ProtoRoot="Grpc" OutputDir="$(Protobuf_OutputPath)%(RelativeDir)"/>
+        <Protobuf Include="proto\livekit_egress.proto" GrpcServices="Client" ProtoRoot="Grpc" OutputDir="$(Protobuf_OutputPath)%(RelativeDir)"/>
+        <Protobuf Include="proto\livekit_room.proto" GrpcServices="Client" ProtoRoot="Grpc" OutputDir="$(Protobuf_OutputPath)%(RelativeDir)"/>
+    </ItemGroup>
+   
 </Project>
