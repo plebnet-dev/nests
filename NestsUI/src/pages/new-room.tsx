@@ -36,7 +36,7 @@ export default function NewRoom() {
         .kind(ROOM_KIND)
         .tag(["d", id])
         .tag(["service", ApiUrl])
-        .tag(["title", name])
+        .tag(["room", name])
         .tag(["summary", desc])
         .tag(["color", color ?? ""])
         .tag(["image", image ?? ""])
