@@ -42,7 +42,7 @@ Sames as NIP-53 `kind: 1311`, there is no reason to have another kind here as th
 {
   "kind": 1311,
   "tags": [
-    ["a", "30311:<Community event author pubkey>:<d-identifier of the community>", "<Optional relay url>", "root"]
+    ["a", "30312:<Community event author pubkey>:<d-identifier of the community>", "<Optional relay url>", "root"]
   ],
   "content": "Zaps to live streams is beautiful.",
   ...
@@ -70,7 +70,7 @@ a given time window.
 
 ## ZapSplits
 
-Zap splits should be set on the room `kind: 30311` as NIP-57.G `zap` tags
+Zap splits should be set on the room `kind: 30312` as NIP-57.G `zap` tags
 
 ## Testing
 Start by bringing up the dev env:
